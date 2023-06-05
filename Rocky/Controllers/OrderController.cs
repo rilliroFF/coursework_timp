@@ -102,19 +102,7 @@ namespace Rocky.Controllers
         {
             OrderHeader orderHeader = _orderHRepo.FirstOrDefault(u => u.Id == OrderVM.OrderHeader.Id);
 
-            var gateway = _brain.GetGateway();
-            Transaction transaction = gateway.Transaction.Find(orderHeader.TransactionId);
 
-           if(transaction.Status == TransactionStatus.AUTHORIZED || transaction.Status == TransactionStatus.SUBMITTED_FOR_SETTLEMENT)
-            {
-                //no refund
-                Result<Transaction> resultvoid = gateway.Transaction.Void(orderHeader.TransactionId);
-            }
-            else
-            {
-                //refund
-                Result<Transaction> resultRefund = gateway.Transaction.Refund(orderHeader.TransactionId);
-            }
             orderHeader.OrderStatus = WC.StatusRefunded;
             _orderHRepo.Save();
             TempData[WC.Success] = "Order Cancelled Successfully";
