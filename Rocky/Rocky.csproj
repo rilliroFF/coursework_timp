@@ -6,6 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Identity\Pages\Account\Register - Копировать %282%29.cshtml.cs" />
+    <Compile Remove="Areas\Identity\Pages\Account\Register - Копировать.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Identity\Pages\Account\Register - Копировать.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Mailjet.Api" Version="1.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.0-preview.6.20312.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.0" />

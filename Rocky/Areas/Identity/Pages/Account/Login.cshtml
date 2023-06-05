@@ -40,9 +40,8 @@
         <input asp-for="Input.Password" placeholder="Пароль..." type="password" class="form-control" />
         <button type="submit" class="btn btn-success btn-block"><i class="fas fa-sign-in-alt"></i> Войти</button>
 
-        <a id="forgot-password" asp-page="./ForgotPassword" class="pb-2 text-info">Забыли пароль?</a>
         <div asp-validation-summary="All" class="text-danger"></div>
-        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn btn-info text-white">Нет учетной записи? Зарегестрироваться</a>
+        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn btn-info text-white">Нет учетной записи? Зарегистрироваться</a>
 
        
     </form>

@@ -17,7 +17,7 @@ using Rocky_Models;
 using Rocky_Utility;
 using Syncfusion.EJ2.Buttons;
 
-namespace Rocky.Areas.Identity.Pages.Account
+namespace Rocky.Areas.Identity.Pages.Account1
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
@@ -96,7 +96,7 @@ namespace Rocky.Areas.Identity.Pages.Account
                 {
                     if (User.IsInRole(WC.AdminRole))
                     {
-                        await _userManager.AddToRoleAsync(user, WC.SalesDepartment);
+                        await _userManager.AddToRoleAsync(user, WC.WorkWarehouse);
                     }
                     else
                     {

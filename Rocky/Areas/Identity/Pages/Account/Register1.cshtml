@@ -1,5 +1,5 @@
 ﻿@page
-@model RegisterModel
+@model Rocky.Areas.Identity.Pages.Account1.RegisterModel
 @using Rocky_Utility
 
     <div class="py-4">
@@ -13,7 +13,7 @@
                             <h3 class="col-12 text-success text-center py-4">
                                 @if (User.IsInRole(WC.AdminRole))
                                 {
-                                    <strong>Регистрация работника отдела продаж</strong>
+                                    <strong>Регистрация сотрудника склада</strong>
                                 }
                                 else
                                 {
@@ -55,7 +55,7 @@
                             <div class="py-2">
                                 @if (User.IsInRole(WC.AdminRole))
                                 {
-                                    <button type="submit" class="btn btn-warning form-control">Зарегистрировать работника отдела продаж</button>
+                                    <button type="submit" class="btn btn-warning form-control">Зарегистрировать сотрудника</button>
                                 }
                                 else
                                 {

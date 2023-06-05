@@ -55,9 +55,10 @@
                                     @if (User.IsInRole(WC.AdminRole))
                                     {
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Регистрация сотрудника</a>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Регистрация сотрудника отдела продаж</a>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register1">Регистрация работника склада</a>
                                     }
-
+                                    
                                 </div>
                             </li>
                         }
